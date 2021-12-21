@@ -1,0 +1,6 @@
+
+tail -c +4289 task4.o > suffix
+	# Benign file: prefix | p | suffix1 | p | suffix2
+head -c 96 suffix > suffix_1
+tail -c +225 suffix > suffix_2
+tail -c 3360 suffix > suffix_2

@@ -1,0 +1,22 @@
+#make file 
+$ touch prefix.txt
+# Create prefix #
+echo "md5collgen attack lab" >> prefix.txt
+
+# Generate MD5 Collision #
+md5collgen -p prefix.txt -o out1.bin out2.bin
+
+# Compare binary files 
+diff out1.bin out2.bin
+
+# Check MD5 Hashes #
+md5sum out1.bin ; md5sum out2.bin
+
+# Understand bin file contents #
+xxd out1.bin
+
+# Compare difference when prefix is mult. of 64 #
+echo "$(python -c 'print("A"*63)')" >> prefix_64.txt
+echo "Generating MD5 Collision...\n"
+md5collgen -p prefix_64.txt -o out1_64.bin out2_64.bin
+xxd out1.bin ; xxd out1_64.bin

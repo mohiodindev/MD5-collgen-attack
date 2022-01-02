@@ -1,4 +1,8 @@
 # MD5-collgen-attack
+
+
+# INSTRUCTIONAAL PDF 
+   ![pdf link](https://seedsecuritylabs.org/Labs_20.04/Files/Crypto_MD5_Collision/Crypto_MD5_Collision.pdf)
 this is the md5 collgen attack lab 
 # Question 1: If the length of your prefix file is not a multiple of 64, what is going to happen?
      Answer: It will be padded with zeros
